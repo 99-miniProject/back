@@ -15,6 +15,7 @@ public class Camp {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "camp_id")
     private Long id;
 
     private String name;
