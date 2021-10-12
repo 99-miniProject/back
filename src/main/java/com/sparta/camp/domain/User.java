@@ -1,5 +1,6 @@
 package com.sparta.camp.domain;
 
+import com.sparta.camp.dto.SignupDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
@@ -27,4 +28,10 @@ public class User extends BaseEntity {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Reservation> reservationList;
+
+    public User(SignupDto signupDto) {
+        this.username = signupDto.getUsername();
+        this.password = signupDto.getPassword();
+        this.nickname = signupDto.getNickname();
+    }
 }
