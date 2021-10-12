@@ -1,0 +1,5 @@
+### 목록 조회
+GET localhost:8888/camps
+
+### 상세 조회
+GET localhost:8888/camps/1
