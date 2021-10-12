@@ -1,6 +1,7 @@
 package com.sparta.camp.domain;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.sparta.camp.dto.SignupDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
@@ -36,5 +37,11 @@ public class User {
         this.username = username;
         this.nickname = nickname;
         this.password = password;
+    }
+
+    public User(SignupDto signupDto) {
+        this.username = signupDto.getUsername();
+        this.password = signupDto.getPassword();
+        this.nickname = signupDto.getNickname();
     }
 }
