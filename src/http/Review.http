@@ -1,0 +1,24 @@
+### 리뷰 작성
+POST localhost:8888/reviews
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "campId": 1,
+  "content": "우왕 굳"
+}
+
+### 리뷰 조회
+GET localhost:8888/reviews/1
+
+### 리뷰 수정
+PUT localhost:8888/reviews/1
+Content-Type: application/json
+
+{
+  "reviewId": 1,
+  "content": "오 잘되는구만!"
+}
+
+### 리뷰 삭제
+DELETE localhost:8888/reviews/1
