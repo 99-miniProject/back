@@ -28,4 +28,14 @@ public class Review extends BaseEntity {
     private Camp camp;
 
     private String content;
+
+    public Review(User user, Camp camp, String content) {
+        this.user = user;
+        this.camp = camp;
+        this.content = content;
+    }
+
+    public void changeContent(String content) {
+        this.content = content;
+    }
 }
