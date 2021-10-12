@@ -1,0 +1,25 @@
+### 예약 생성
+POST http://localhost:8888/books
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "campId": 1,
+  "count": 3,
+  "checkinDate": "2019-12-14T06:34:20"
+}
+
+### 예약 조회
+GET localhost:8888/books/1
+
+### 예약 수정
+PUT http://localhost:8888/books/3
+Content-Type: application/json
+
+{
+  "count": 3,
+  "checkinDate": "2019-12-14T06:34:20"
+}
+
+### 예약 삭제
+DELETE  localhost:8888/books/3
