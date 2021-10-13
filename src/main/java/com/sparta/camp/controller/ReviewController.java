@@ -2,8 +2,10 @@ package com.sparta.camp.controller;
 
 import com.sparta.camp.domain.Review;
 import com.sparta.camp.dto.ReviewRequestDto;
+import com.sparta.camp.security.UserDetailsImpl;
 import com.sparta.camp.service.ReviewService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,9 +18,11 @@ public class ReviewController {
 
     // 리뷰 작성
     @PostMapping("/reviews")
-    public Review create(@RequestBody ReviewRequestDto requestDto) {
+    public Review create(@RequestBody ReviewRequestDto requestDto, @AuthenticationPrincipal UserDetailsImpl userDetails) {
 
-        return service.create(requestDto);
+        Long userId = userDetails.getUser().getId();
+
+        return service.create(requestDto, userId);
     }
 
     // 리뷰 조회

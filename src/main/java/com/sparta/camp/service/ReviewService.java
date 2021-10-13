@@ -21,9 +21,9 @@ public class ReviewService {
     private final CampRepository campRepository;
 
     // 리뷰 작성
-    public Review create(ReviewRequestDto requestDto) {
+    public Review create(ReviewRequestDto requestDto, Long userId) {
 
-        User user = userRepository.findById(requestDto.getUserId()).orElseThrow(
+        User user = userRepository.findById(userId).orElseThrow(
                 () -> new NullPointerException("존재하지 않는 회원입니다.")
         );
 

@@ -11,8 +11,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class ReviewRequestDto {
 
-    private Long userId;
-
     private Long campId;
 
     private String content;

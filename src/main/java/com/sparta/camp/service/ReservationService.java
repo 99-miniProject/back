@@ -22,9 +22,9 @@ public class ReservationService {
     private final CampRepository campRepository;
 
     // 예약 생성
-    public Reservation create(ReservationRequestDto requestDto) {
+    public Reservation create(ReservationRequestDto requestDto, Long userId) {
 
-        User user = userRepository.findById(requestDto.getUserId()).orElseThrow(
+        User user = userRepository.findById(userId).orElseThrow(
                 () -> new NullPointerException("존재하지 않는 회원입니다.")
         );
 

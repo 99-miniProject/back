@@ -13,8 +13,6 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class ReservationRequestDto {
 
-    private Long userId;
-
     private Long campId;
 
     private int count;
