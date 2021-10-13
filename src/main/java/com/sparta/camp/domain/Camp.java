@@ -32,12 +32,10 @@ public class Camp {
 
     @OneToMany(mappedBy = "camp", cascade = CascadeType.ALL)
     @JsonBackReference
-    @JsonIgnore
     private List<Review> reviewList;
 
     @OneToMany(mappedBy = "camp", cascade = CascadeType.ALL)
     @JsonBackReference
-    @JsonIgnore
     private List<Reservation> reservationList;
 
     public Camp(String name, int price, String info, int capacity, String img) {
