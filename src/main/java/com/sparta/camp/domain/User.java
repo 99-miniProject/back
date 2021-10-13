@@ -1,6 +1,7 @@
 package com.sparta.camp.domain;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sparta.camp.dto.SignupDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,10 +28,12 @@ public class User {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     @JsonBackReference
+    @JsonIgnore
     private List<Review> reviewList;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     @JsonBackReference
+    @JsonIgnore
     private List<Reservation> reservationList;
 
     public User(String username, String nickname, String password) {
