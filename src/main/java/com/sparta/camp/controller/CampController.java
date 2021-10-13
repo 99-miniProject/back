@@ -16,7 +16,7 @@ public class CampController {
     private final CampService service;
 
     // 목록 조회
-    @GetMapping("/camps")
+    @GetMapping("/")
     public List<Camp> getList() {
 
         return service.getList();
