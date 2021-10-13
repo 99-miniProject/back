@@ -20,6 +20,8 @@ public class Camp {
     @Column(name = "camp_id")
     private Long id;
 
+    private String category;
+
     private String name;
 
     private int price;
@@ -30,6 +32,10 @@ public class Camp {
 
     private String img;
 
+    private String phone;
+
+    private String address;
+
     @OneToMany(mappedBy = "camp", cascade = CascadeType.ALL)
     @JsonBackReference
     private List<Review> reviewList;
@@ -38,11 +44,14 @@ public class Camp {
     @JsonBackReference
     private List<Reservation> reservationList;
 
-    public Camp(String name, int price, String info, int capacity, String img) {
+    public Camp(String category, String name, int price, String info, int capacity, String img, String phone, String address) {
+        this.category = category;
         this.name = name;
         this.price = price;
         this.info = info;
         this.capacity = capacity;
         this. img = img;
+        this.phone = phone;
+        this.address = address;
     }
 }
