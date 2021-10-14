@@ -19,8 +19,8 @@ public class JwtAuthenticationFilter extends GenericFilterBean {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        // 헤더에서 JWT 를 받아옵니다.
-        String token = jwtTokenProvider.resolveToken((HttpServletRequest) request);
+
+        String token = jwtTokenProvider.resolveToken((HttpServletRequest) request); // 헤더에서 JWT 를 받아옵니다.
         System.out.println(token); // 클라이언트에서 받은 token값을 서버 콘솔에 찍어줌.
         // 유효한 토큰인지 확인합니다.
         if (token != null && jwtTokenProvider.validateToken(token)) {
@@ -29,7 +29,6 @@ public class JwtAuthenticationFilter extends GenericFilterBean {
 
             Authentication authentication = jwtTokenProvider.getAuthentication(token);
             // 토큰 인증과정을 거친 결과를 authentication이라는 이름으로 저장해줌.
-
 
             SecurityContextHolder.getContext().setAuthentication(authentication);
             // SecurityContext 에 Authentication 객체를 저장합니다.
