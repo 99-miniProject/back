@@ -12,6 +12,8 @@
 
 👨🏻‍🤝‍👨🏻 Back: 김태웅 & 홍재환
 
+---
+
 🎯 개발 목표: 
 
 1. 서로 다른 개발환경에서의 연동(CORS) 
@@ -20,6 +22,8 @@
 4. 캠핑장 리뷰 CRUD 기능
 5. 캠핑장 예약 기능
 6. 마이페이지 예약 현황 조회
+
+---
 
 ✔ Tech Stack
 
@@ -30,15 +34,21 @@
 | Database  |              | MySQL                        |
 | Deploy    | S3           | AWS                          |
 
+---
+
 ✔ API
 
 ![image](https://user-images.githubusercontent.com/76515226/137482416-85a2a2a9-3e35-4ba9-a705-1ae68508e113.png)
 
 ![image](https://user-images.githubusercontent.com/76515226/137482503-46e59404-3a44-44ba-a576-c8e85e9f6bb6.png)
 
+---
+
 ✔ ERD
 
 ![image](https://user-images.githubusercontent.com/76515226/137482671-07892edd-687b-48c8-8e27-eb050952906b.png)
+
+---
 
 ✔ 트러블슈팅
 
