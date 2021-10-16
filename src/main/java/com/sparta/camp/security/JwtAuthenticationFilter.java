@@ -24,7 +24,7 @@ public class JwtAuthenticationFilter extends GenericFilterBean {
         System.out.println(token); // 클라이언트에서 받은 token값을 서버 콘솔에 찍어줌.
         // 유효한 토큰인지 확인합니다.
         if (token != null && jwtTokenProvider.validateToken(token)) {
-            // validateToken의 결과가 True라면~~~
+            // validateToken의 결과가 True이고
             // 토큰이 유효하면 토큰으로부터 유저 정보를 받아옵니다.
 
             Authentication authentication = jwtTokenProvider.getAuthentication(token);

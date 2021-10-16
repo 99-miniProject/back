@@ -26,10 +26,13 @@ public class UserController {
     private final PasswordEncoder passwordEncoder;
     private final JwtTokenProvider jwtTokenProvider;
 
+    // 회원가입 url
     @PostMapping("/signup")
     public String createUser(@RequestBody SignupDto signupDto) throws IllegalAccessException {
         return userService.createUser(signupDto);
     }
+
+    // 로그인 url
     @PostMapping("/login")
     public List<Map<String,String>> login(@RequestBody SignupDto signupDto) {
         User user = userRepository.findByUsername(signupDto.getUsername())
@@ -38,6 +41,7 @@ public class UserController {
             throw new IllegalArgumentException("잘못된 비밀번호입니다.");
         }
 
+        // 토큰 찾아오기
         Map<String,String> username =new HashMap<>();
         Map<String,String>token = new HashMap<>();
         List<Map<String,String>> tu = new ArrayList<>(); // -> 리스트를 만드는데, Map형태(키:밸류 형태)의 변수들을 담을 것이다.
