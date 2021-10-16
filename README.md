@@ -2,6 +2,10 @@
 
 ### 📢 캠핑장 찾기 어려우셨죠? 저희 캠프 커넥트가 연결 시켜드리겠습니다!
 
+🎉 사이트 주소: https://bit.ly/2YYBOXm
+
+📺 데모 영상: https://www.youtube.com/watch?v=tvhFhO4n3OU
+
 📆 개발 기간: 10/11 ~ 10/16
 
 👨🏻‍🤝‍👨🏻 Front: 윤진선 & 이경아
