@@ -8,6 +8,7 @@ import com.sparta.camp.repository.CampRepository;
 import com.sparta.camp.repository.ReviewRepository;
 import com.sparta.camp.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -42,7 +43,7 @@ public class ReviewService {
     // 리뷰 조회
     public List<Review> getList(Long campId) {
 
-        return reviewRepository.findAllByCampId(campId);
+        return reviewRepository.findAllByCampId(campId, Sort.by("regDate").descending());
     }
 
     // 리뷰 수정
